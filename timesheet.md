@@ -12,3 +12,5 @@
 
 - start 9AM CET
 - stop 11AM CET
+
+- start 11:45AM CET

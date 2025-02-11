@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Utils
+import { useState } from 'react';
+
+// Types
+import type { Mission } from './types';
+
+// Components
+import { Hero } from '@/components/hero';
+import Dashboard from '@/components/dashboard';
+import { Particles } from '@/components/magicui/particles';
+
+import data from '@/data/index.json';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const missions = data.missions as Mission[];
+  const [selectedMissionId, setSelectedMissionId] = useState<string | null>(
+    null,
+  );
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="relative flex h-screen items-center justify-center overflow-hidden">
+      {!selectedMissionId && (
+        <Hero missions={missions} onSelect={setSelectedMissionId} />
+      )}
+
+      {selectedMissionId && (
+        <Dashboard
+          selectedMissionId={selectedMissionId}
+          setSelectedMissionId={setSelectedMissionId}
+        />
+      )}
+
+      <Particles
+        className="absolute inset-0 -z-10"
+        quantity={100}
+        staticity={50}
+        ease={50}
+        size={0.4}
+        color="#ffffff"
+        vx={0}
+        vy={0}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
