@@ -1,0 +1,180 @@
+{
+  "missions": [
+    {
+      "name": "Phoenix Ascend",
+      "id": "1",
+      "launch_date": "2023-05-01",
+      "current_location": "2",
+      "status": "incomplete",
+      "route": ["1", "2", "3"],
+      "telemetry": {
+        "temperature": 25,
+        "fuel_level": 80,
+        "speed": 100
+      }
+    },
+    {
+      "name": "Celestial Voyager",
+      "id": "2",
+      "launch_date": "2024-01-15",
+      "current_location": "3",
+      "status": "active",
+      "route": ["1", "3", "7", "5"],
+      "telemetry": {
+        "temperature": 30,
+        "fuel_level": 70,
+        "speed": 150
+      }
+    },
+    {
+      "name": "Nebula Crusader",
+      "id": "3",
+      "launch_date": "2022-07-20",
+      "current_location": "4",
+      "status": "completed",
+      "route": ["7", "5", "4"],
+      "telemetry": {
+        "temperature": 28,
+        "fuel_level": 90,
+        "speed": 200
+      }
+    },
+    {
+      "name": "Eclipse Pioneer",
+      "id": "4",
+      "launch_date": "2025-03-10",
+      "current_location": "",
+      "status": "planned",
+      "route": ["1", "3", "7", "5"],
+      "telemetry": {
+        "temperature": 22,
+        "fuel_level": 100,
+        "speed": 0
+      }
+    },
+    {
+      "name": "Starborn Odyssey",
+      "id": "5",
+      "launch_date": "2021-11-05",
+      "current_location": "6",
+      "route": ["3", "6", "5"],
+      "status": "failed",
+      "telemetry": {
+        "temperature": 10,
+        "fuel_level": 20,
+        "speed": 50
+      }
+    },
+    {
+      "name": "Infinity Horizon",
+      "id": "6",
+      "launch_date": "2023-09-30",
+      "current_location": "7",
+      "status": "active",
+      "route": ["4", "7", "5", "1"],
+      "telemetry": {
+        "temperature": 27,
+        "fuel_level": 60,
+        "speed": 180
+      }
+    }
+  ],
+  "celestial_bodies": [
+    {
+      "id": "1",
+      "name": "Mars",
+      "type": "Planet",
+      "distance_from_earth": 100000000,
+      "surface_temperature": 20,
+      "image_url": "https://example.com/mars.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Jupiter",
+      "type": "Planet",
+      "distance_from_earth": 500000000,
+      "surface_temperature": -145,
+      "image_url": "https://example.com/jupiter.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Saturn",
+      "type": "Planet",
+      "distance_from_earth": 1000000000,
+      "surface_temperature": -178,
+      "image_url": "https://example.com/saturn.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Venus",
+      "type": "Planet",
+      "distance_from_earth": 40000000,
+      "surface_temperature": 460,
+      "image_url": "https://example.com/venus.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Mercury",
+      "type": "Planet",
+      "distance_from_earth": 80000000,
+      "surface_temperature": 167,
+      "image_url": "https://example.com/mercury.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Neptune",
+      "type": "Planet",
+      "distance_from_earth": 4300000000,
+      "surface_temperature": -214,
+      "image_url": "https://example.com/neptune.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Uranus",
+      "type": "Planet",
+      "distance_from_earth": 2900000000,
+      "surface_temperature": -224,
+      "image_url": "https://example.com/uranus.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Moon",
+      "type": "Moon",
+      "distance_from_earth": 384400,
+      "surface_temperature": -20,
+      "image_url": "https://example.com/moon.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Europa",
+      "type": "Moon",
+      "distance_from_earth": 628300000,
+      "surface_temperature": -160,
+      "image_url": "https://example.com/europa.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Titan",
+      "type": "Moon",
+      "distance_from_earth": 1222000000,
+      "surface_temperature": -179,
+      "image_url": "https://example.com/titan.jpg"
+    }
+  ],
+  "resources": [
+    { "type": "Fuel", "quantity": 100, "location": "1" },
+    { "type": "Oxygen", "quantity": 50, "location": "2" },
+    { "type": "Water", "quantity": 200, "location": "3" },
+    { "type": "Food", "quantity": 75, "location": "4" },
+    { "type": "Energy Cells", "quantity": 40, "location": "5" }
+  ],
+  "locations": [
+    { "id": "1", "name": "Earth Station" },
+    { "id": "2", "name": "Mars Base" },
+    { "id": "3", "name": "Lunar Outpost" },
+    { "id": "4", "name": "Europa Research Facility" },
+    { "id": "5", "name": "Titan Supply Depot" },
+    { "id": "6", "name": "Jovian Relay Station" },
+    { "id": "7", "name": "Neptune Observation Post" }
+  ]
+}
