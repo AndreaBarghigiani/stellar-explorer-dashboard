@@ -1,12 +1,12 @@
 // Utils
-import { formatDate, generateTelemetry } from '@/lib/utils';
+import { cn, formatDate, generateTelemetry } from '@/lib/utils';
 
 // Types
 import type { Mission, Location } from '@/types';
 
 // Components
 import MissionStatusBadge from '@/components/mission-status-badge';
-
+import Stepper from '@/components/stepper';
 const MissionDetails = ({
   mission,
   locations,
@@ -19,7 +19,9 @@ const MissionDetails = ({
     mission.launch_date,
     30,
   );
-  console.log('testTelemetry:', testTelemetry);
+
+  console.log('mission route', mission.route);
+
   return (
     <div className="flex flex-col gap-4 rounded-md border bg-gray-900/50 p-4">
       <header className="flex items-center justify-between gap-4">
@@ -35,7 +37,9 @@ const MissionDetails = ({
         <MissionStatusBadge status={mission.status} />
       </header>
 
-      <section></section>
+      <section>
+        <Stepper totalSteps={12} activeStepIndex={3} />
+      </section>
     </div>
   );
 };
