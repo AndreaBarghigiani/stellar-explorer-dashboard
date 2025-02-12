@@ -29,3 +29,4 @@
 - stop 1:30PM CET
 
 - start 3PM CET
+- stop 5:30PM CET
