@@ -11,6 +11,27 @@ export type Telemetry = {
   speed: number;
 };
 
+export type TelemetryChartData = Telemetry & {
+  date: string;
+};
+
+export type TelemetryChartRanges = {
+  temperature: {
+    min: number;
+    max: number;
+  };
+  fuel_level?: {
+    min: number;
+    max: number;
+  };
+  speed: {
+    min: number;
+    max: number;
+  };
+};
+
+export type ChartType = 'line' | 'bar';
+
 export type Mission = {
   name: string;
   id: string;
@@ -26,7 +47,17 @@ export type Location = {
   name: string;
 };
 
+export type CelestialBody = {
+  id: string;
+  name: string;
+  type: string;
+  distance_from_earth: number;
+  surface_temperature: number;
+  image_url: string;
+};
+
 export type Data = {
   missions: Mission[];
   locations: Location[];
+  celestial_bodies: CelestialBody[];
 };

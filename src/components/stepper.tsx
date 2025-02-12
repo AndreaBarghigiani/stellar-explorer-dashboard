@@ -1,6 +1,8 @@
 // Utils
-import * as React from 'react';
 import { cn } from '@/lib/utils';
+
+// Types
+import type { Location } from '@/types';
 
 // Components
 import { Progress } from '@/components/ui/progress';
@@ -12,41 +14,47 @@ const calculateProgress = (totalSteps: number, currentStep: number) => {
 
 const Stepper = ({
   activeStepIndex,
-  totalSteps,
+  totalLocations,
   className,
+  setLocationId,
 }: {
   activeStepIndex: number;
-  totalSteps: number;
+  totalLocations: Location[];
+  setLocationId: (id: string) => void;
   className?: string;
 }) => {
-  // Ensure that the currentStep is within the range of totalSteps
-  if (activeStepIndex > totalSteps) {
-    activeStepIndex = totalSteps;
-  }
-
-  console.log('current', activeStepIndex);
-
-  // As the activeStepIndex range is from 0 to totalSteps and not from 1 to totalSteps, we need to add 1 to it
-  // It also rounds the progress to the nearest greater integer to ensure that certain middle steps are connected
-  // properly with the bar.
-  const progress = calculateProgress(totalSteps, activeStepIndex);
-
   return (
     <div
-      className={cn('relative flex items-center justify-between', className)}
+      className={cn(
+        'relative mb-10 flex items-center justify-between',
+        className,
+      )}
     >
-      {Array.from({ length: totalSteps }).map((_, i) => (
-        <React.Fragment key={i}>
+      {totalLocations.map((location, i) => (
+        <button
+          key={location.id}
+          className="flex flex-col items-center"
+          onClick={() => {
+            setLocationId(location.id);
+          }}
+        >
           <div
             className={cn('z-10 size-4 rounded-full border-2', {
               'border-primary bg-primary': i <= activeStepIndex,
               'border-secondary bg-secondary': i > activeStepIndex,
             })}
           />
-        </React.Fragment>
+
+          <span className="absolute -bottom-8 text-nowrap text-xs">
+            {totalLocations.find((l) => l.id === location.id)?.name}
+          </span>
+        </button>
       ))}
 
-      <Progress value={progress} className="absolute" />
+      <Progress
+        value={calculateProgress(totalLocations.length, activeStepIndex)}
+        className="absolute"
+      />
     </div>
   );
 };
