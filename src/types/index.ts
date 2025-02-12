@@ -42,11 +42,6 @@ export type Mission = {
   telemetry: Telemetry;
 };
 
-export type Location = {
-  id: string;
-  name: string;
-};
-
 export type CelestialBody = {
   id: string;
   name: string;
@@ -58,6 +53,5 @@ export type CelestialBody = {
 
 export type Data = {
   missions: Mission[];
-  locations: Location[];
   celestial_bodies: CelestialBody[];
 };

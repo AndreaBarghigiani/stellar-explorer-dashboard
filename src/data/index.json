@@ -169,14 +169,5 @@
     { "type": "Energy Cells", "quantity": 40, "location": "5" },
     { "type": "Food", "quantity": 75, "location": "6" },
     { "type": "Oxygen", "quantity": 50, "location": "7" }
-  ],
-  "locations": [
-    { "id": "1", "name": "Earth Station" },
-    { "id": "2", "name": "Mars Base" },
-    { "id": "3", "name": "Lunar Outpost" },
-    { "id": "4", "name": "Europa Research Facility" },
-    { "id": "5", "name": "Titan Supply Depot" },
-    { "id": "6", "name": "Jovian Relay Station" },
-    { "id": "7", "name": "Neptune Observation Post" }
   ]
 }

@@ -1,5 +1,5 @@
 // Utils
-import { formatDate, getTelemetryRanges } from '@/lib/utils';
+import { getTelemetryRanges } from '@/lib/utils';
 
 // Types
 import { ChartType, TelemetryChartData } from '@/types';
