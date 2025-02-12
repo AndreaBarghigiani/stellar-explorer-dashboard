@@ -1,5 +1,5 @@
 // Utils
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 // Types
@@ -24,12 +24,19 @@ const Dashboard = ({
     (mission) => mission.id === selectedMissionId,
   );
 
-  const [focusedLocationId, setFocusedLocationId] = useState<string | null>(
-    selectedMission?.current_location ?? null,
+  const [selectedLocationId, setSelectedLocationId] = useState<string | null>(
+    null,
   );
 
-  const focusedLocation = celestial_bodies.find(
-    (location) => location.id === focusedLocationId,
+  // Sync location data with selected mission
+  useEffect(() => {
+    if (selectedMission?.current_location !== selectedLocationId) {
+      setSelectedLocationId(selectedMission?.current_location ?? null);
+    }
+  }, [selectedMission?.current_location, selectedLocationId]);
+
+  const selectedLocation = celestial_bodies.find(
+    (location) => location.id === selectedLocationId,
   );
 
   return (
@@ -69,11 +76,11 @@ const Dashboard = ({
           <MissionDetails
             mission={selectedMission}
             locations={celestial_bodies}
-            setLocationId={setFocusedLocationId}
+            setLocationId={setSelectedLocationId}
           />
         )}
 
-        {focusedLocation && <LocationDetails location={focusedLocation} />}
+        {selectedLocation && <LocationDetails location={selectedLocation} />}
       </main>
     </div>
   );
