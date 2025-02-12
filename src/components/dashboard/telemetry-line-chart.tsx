@@ -61,7 +61,7 @@ const TelemetryLineChart = ({
             }
           }}
         />
-        <Legend />
+        <Legend wrapperStyle={{ bottom: -10 }} />
         <Line
           type="monotone"
           yAxisId="temperature"
