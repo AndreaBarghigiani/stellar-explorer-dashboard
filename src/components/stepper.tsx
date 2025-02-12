@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 
 // Types
-import type { Location } from '@/types';
+import type { CelestialBody } from '@/types';
 
 // Components
 import { Progress } from '@/components/ui/progress';
@@ -19,7 +19,7 @@ const Stepper = ({
   setLocationId,
 }: {
   activeStepIndex: number;
-  totalLocations: Location[];
+  totalLocations: CelestialBody[];
   setLocationId: (id: string) => void;
   className?: string;
 }) => {
