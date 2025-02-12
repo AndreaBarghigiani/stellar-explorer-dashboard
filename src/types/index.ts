@@ -51,7 +51,10 @@ export type CelestialBody = {
   image_url: string;
 };
 
+export type Resource = { type: string; quantity: number; location: string };
+
 export type Data = {
   missions: Mission[];
   celestial_bodies: CelestialBody[];
+  resources: Resource[];
 };
