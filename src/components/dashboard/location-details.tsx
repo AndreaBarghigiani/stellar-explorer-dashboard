@@ -1,7 +1,8 @@
+// Utils
+import { formatNumberCompact } from '@/lib/utils';
+
 // Types
 import { CelestialBody } from '@/types';
-
-// Components
 
 const LocationDetails = ({ location }: { location: CelestialBody }) => {
   return (
@@ -22,7 +23,7 @@ const LocationDetails = ({ location }: { location: CelestialBody }) => {
         <li>
           <strong>Distance from Earth: </strong>
           <span className="text-gray-400">
-            {location.distance_from_earth} km
+            {formatNumberCompact(location.distance_from_earth)} km
           </span>
         </li>
         <li>

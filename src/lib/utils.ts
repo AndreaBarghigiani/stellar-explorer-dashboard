@@ -39,6 +39,20 @@ export function formatDate(dateString: string) {
 }
 
 /**
+ * Formats a number to a human-readable compact format.
+ *
+ * @param {number} num - The number to format.
+ * @returns {string} - The formatted number.
+ */
+export function formatNumberCompact(num: number) {
+  const formatter = new Intl.NumberFormat('en-US', {
+    notation: 'compact',
+  });
+
+  return formatter.format(num);
+}
+
+/**
  * Generate telemetry data for a mission
  *
  * @param telemetry Telemetry - The original telemetry data we have for the mission

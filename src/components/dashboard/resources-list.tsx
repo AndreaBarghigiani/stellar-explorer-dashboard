@@ -16,7 +16,7 @@ const ResourcesList = ({
         );
 
         return (
-          <li key={resource.type} className="border p-4">
+          <li key={resource.type + resource.location} className="border p-4">
             <h5 className="text-xl font-semibold">{resource.type}</h5>
             <p>
               <strong>Quantity: </strong>
