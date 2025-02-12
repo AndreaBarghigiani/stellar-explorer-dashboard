@@ -1,3 +1,6 @@
+// Utils
+import { cn } from '@/lib/utils';
+
 // Types
 import type { Mission } from '@/types';
 
@@ -13,13 +16,15 @@ import {
 const MissionSwitcher = ({
   missions,
   onSelect,
+  className,
 }: {
   missions: Mission[];
   onSelect: (mission: string) => void;
+  className?: string;
 }) => {
   return (
     <Select onValueChange={(id) => onSelect(id)}>
-      <SelectTrigger className="w-48">
+      <SelectTrigger className={cn('w-full xl:w-48', className)}>
         <SelectValue placeholder="Select a mission" />
       </SelectTrigger>
       <SelectContent>

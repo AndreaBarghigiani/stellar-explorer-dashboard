@@ -18,7 +18,11 @@ export function Hero({
           Stellar Explorer Dashboard
         </h1>
 
-        <MissionSwitcher missions={missions} onSelect={onSelect} />
+        <MissionSwitcher
+          className="max-w-64"
+          missions={missions}
+          onSelect={onSelect}
+        />
       </div>
     </>
   );

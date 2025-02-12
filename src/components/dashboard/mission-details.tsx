@@ -46,17 +46,19 @@ const MissionDetails = ({
 
   return (
     <div className="flex flex-col gap-4 rounded-md border bg-gray-900/50 p-4">
-      <header className="flex items-center justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-semibold">{mission.name}</h2>
-          <h4 className="text-gray-400">
-            Launch Date:{' '}
-            <span className="text-xs text-gray-300">
-              {formatDate(mission.launch_date)}
-            </span>
-          </h4>
-        </div>
+      <header className="flex flex-col items-center justify-between gap-2">
         <MissionStatusBadge status={mission.status} />
+
+        <h4 className="text-gray-400">
+          Launch Date:{' '}
+          <span className="text-gray-300">
+            {formatDate(mission.launch_date)}
+          </span>
+        </h4>
+
+        <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-slate-500 bg-clip-text text-center text-6xl font-bold leading-relaxed text-transparent">
+          {mission.name}
+        </h1>
       </header>
 
       <section className="flex flex-col items-center gap-4">

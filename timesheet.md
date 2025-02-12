@@ -26,3 +26,6 @@
 ### Finish Dashboard + Tests
 
 - start 11:30AM CET
+- stop 1:30PM CET
+
+- start 3PM CET
