@@ -40,6 +40,24 @@ export default {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
+        'status-complete': {
+          DEFAULT: 'hsl(var(--status-complete))',
+        },
+        'status-incomplete': {
+          DEFAULT: 'hsl(var(--status-incomplete))',
+        },
+        'status-planned': {
+          DEFAULT: 'hsl(var(--status-planned))',
+        },
+        'status-pending': {
+          DEFAULT: 'hsl(var(--status-pending))',
+        },
+        'status-failed': {
+          DEFAULT: 'hsl(var(--status-failed))',
+        },
+        'status-active': {
+          DEFAULT: 'hsl(var(--status-active))',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

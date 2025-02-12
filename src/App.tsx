@@ -18,7 +18,7 @@ function App() {
   );
 
   return (
-    <div className="relative flex h-screen items-center justify-center overflow-hidden">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {!selectedMissionId && (
         <Hero missions={missions} onSelect={setSelectedMissionId} />
       )}

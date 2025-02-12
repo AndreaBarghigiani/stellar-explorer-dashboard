@@ -13,7 +13,7 @@ export function Hero({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-16">
         <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-white to-slate-500 bg-clip-text text-center text-8xl font-bold leading-none text-transparent">
           Stellar Explorer Dashboard
         </h1>

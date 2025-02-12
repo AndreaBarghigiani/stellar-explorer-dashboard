@@ -22,19 +22,17 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
+    --chart-1: 39 52% 80%;
+    --chart-2: 280 46% 67%;
+    --chart-3: 188 85% 71%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --status-incomplete: 265 52% 68%;
+    --status-complete: 233 81% 59%;
+    --status-pending: 189 85% 70%;
+    --status-failed: 216 87% 94%;
+    --status-active: 188 85% 71%;
+    --status-planned: 39 52% 80%;
   }
 }
 

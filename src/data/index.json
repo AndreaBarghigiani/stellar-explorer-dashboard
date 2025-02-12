@@ -10,7 +10,7 @@
       "telemetry": {
         "temperature": 25,
         "fuel_level": 80,
-        "speed": 100
+        "speed": 23263
       }
     },
     {
@@ -23,7 +23,7 @@
       "telemetry": {
         "temperature": 30,
         "fuel_level": 70,
-        "speed": 150
+        "speed": 17124
       }
     },
     {
@@ -36,7 +36,7 @@
       "telemetry": {
         "temperature": 28,
         "fuel_level": 90,
-        "speed": 200
+        "speed": 25125
       }
     },
     {
@@ -62,7 +62,7 @@
       "telemetry": {
         "temperature": 10,
         "fuel_level": 20,
-        "speed": 50
+        "speed": 5517
       }
     },
     {
@@ -75,7 +75,7 @@
       "telemetry": {
         "temperature": 27,
         "fuel_level": 60,
-        "speed": 180
+        "speed": 18710
       }
     }
   ],
@@ -166,7 +166,9 @@
     { "type": "Oxygen", "quantity": 50, "location": "2" },
     { "type": "Water", "quantity": 200, "location": "3" },
     { "type": "Food", "quantity": 75, "location": "4" },
-    { "type": "Energy Cells", "quantity": 40, "location": "5" }
+    { "type": "Energy Cells", "quantity": 40, "location": "5" },
+    { "type": "Food", "quantity": 75, "location": "6" },
+    { "type": "Oxygen", "quantity": 50, "location": "7" }
   ],
   "locations": [
     { "id": "1", "name": "Earth Station" },
