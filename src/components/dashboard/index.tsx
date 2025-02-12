@@ -1,12 +1,14 @@
 // Utils
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
 // Types
-import { Mission, Data } from '@/types';
+import { Data } from '@/types';
 
 // Components
-import MissionDetails from '@/components/dashboard/mission-details';
 import MissionStatusBadge from '@/components/mission-status-badge';
+import MissionDetails from '@/components/dashboard/mission-details';
+import LocationDetails from '@/components/dashboard/location-details';
 
 import data from '@/data/index.json';
 
@@ -17,9 +19,17 @@ const Dashboard = ({
   selectedMissionId: string;
   setSelectedMissionId: (id: string) => void;
 }) => {
-  const { missions, locations } = data as Data;
+  const { missions, celestial_bodies } = data as Data;
   const selectedMission = missions.find(
     (mission) => mission.id === selectedMissionId,
+  );
+
+  const [focusedLocationId, setFocusedLocationId] = useState<string | null>(
+    selectedMission?.current_location ?? null,
+  );
+
+  const focusedLocation = celestial_bodies.find(
+    (location) => location.id === focusedLocationId,
   );
 
   return (
@@ -54,10 +64,16 @@ const Dashboard = ({
         </ul>
       </aside>
 
-      <main className="col-span-3 h-full">
+      <main className="col-span-3 flex h-full flex-col gap-4">
         {selectedMission && (
-          <MissionDetails mission={selectedMission} locations={locations} />
+          <MissionDetails
+            mission={selectedMission}
+            locations={celestial_bodies}
+            setLocationId={setFocusedLocationId}
+          />
         )}
+
+        {focusedLocation && <LocationDetails location={focusedLocation} />}
       </main>
     </div>
   );
